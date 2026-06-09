@@ -8,7 +8,7 @@ import {
   createAddress,
   updateAddress,
   deleteAddress
-} from '../services/addressService';
+} from '../services/AddressService';
 
 function PersonAddresses() {
   const { id } = useParams();
