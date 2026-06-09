@@ -36,3 +36,18 @@ export async function deleteAddress(id) {
 
   if (error) throw error;
 }
+
+export async function getAddresses() {
+  const { data, error } = await supabase
+    .from('addresses')
+    .select(`
+      *,
+      people (
+        name
+      )
+    `);
+
+  if (error) throw error;
+
+  return data;
+}

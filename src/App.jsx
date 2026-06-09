@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import People from './pages/People';
 import PersonDetails from './pages/PersonDetails';
 import PersonAddresses from './pages/PersonAddresses';
+import Addresses from './pages/Addresses';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/personas" element={<People />} />
+        <Route path="/direcciones" element={<Addresses />} />
 
         <Route
           path="/personas/:id"
