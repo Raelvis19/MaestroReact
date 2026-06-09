@@ -37,3 +37,13 @@ export async function deleteSocialNetwork(id) {
 
   if (error) throw error;
 }
+
+export async function countSocialNetworks() {
+  const { count, error } = await supabase
+    .from('social_networks')
+    .select('*', { count: 'exact', head: true });
+
+  if (error) throw error;
+
+  return count;
+}

@@ -48,3 +48,13 @@ export async function deletePerson(id) {
 
   if (error) throw error;
 }
+
+export async function countPeople() {
+  const { count, error } = await supabase
+    .from('people')
+    .select('*', { count: 'exact', head: true });
+
+  if (error) throw error;
+
+  return count;
+}

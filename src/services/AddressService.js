@@ -51,3 +51,13 @@ export async function getAddresses() {
 
   return data;
 }
+
+export async function countAddresses() {
+  const { count, error } = await supabase
+    .from('addresses')
+    .select('*', { count: 'exact', head: true });
+
+  if (error) throw error;
+
+  return count;
+}
