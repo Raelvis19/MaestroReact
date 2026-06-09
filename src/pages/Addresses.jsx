@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAddresses } from '../services/addressService';
+import { getAddresses } from '../services/AddressService';
 
 function Addresses() {
   const [addresses, setAddresses] = useState([]);
